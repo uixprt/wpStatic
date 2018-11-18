@@ -1,0 +1,32 @@
+.prf-tabs {
+  &__menu {
+    display: flex;
+  }
+
+  &__link {
+    flex: 1;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+
+    &.active {
+      font-size: 150%;
+      color: rebeccaPurple;
+    }
+  }
+
+  &__pane {
+    transition: opacity 0.15s ease;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &:not(.show) {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+version:                   '2'
+services:
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - db
+    ports:
+      - 127.0.0.38:80:80
+#      - 127.0.0.30:443:443
+    volumes:
+      - ./app/wp-content:/var/www/html/wp-content/
+      - ./config/wp-config.php:/var/www/html/wp-config.php
+      - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./config/local/.htaccess:/var/www/html/.htaccess
+#      - ./config/local/ssl:/etc/apache2/certs
+#      - ./config/local/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    env_file:
+      - ./config/local/.env
+    command:
+          - bash
+          - -c
+          - |
+            docker-entrypoint.sh apache2-foreground
+    restart:               always
+
+  db:
+    image:                 mariadb:latest
+    volumes:
+      - ./db:/var/lib/mysql
+    restart:               always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE:      wordpress
+      MYSQL_USER:          wordpress
+      MYSQL_PASSWORD:      wordpress
+
+  phpmyadmin:
+    image:                 phpmyadmin/phpmyadmin:latest
+    depends_on:
+     - db
+    environment:
+     PMA_ARBITRARY:        1
+     TESTSUITE_PASSWORD:   wordpress
+    restart:               always
+    ports:
+      - 127.0.0.38:8090:80
