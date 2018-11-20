@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "83f1d2a141fc9957f2cc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5089bf5b1495e3222bc5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,11 +722,22 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(32)(__webpack_require__.s = 32);
+/******/ 	return hotCreateRequire(31)(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 1 */
 /*!*****************************************************************************************************************!*\
   !*** /home/asher/personal/static/app/wp-content/themes/static/node_modules/html-entities/lib/html5-entities.js ***!
   \*****************************************************************************************************************/
@@ -925,17 +936,6 @@ function createIndexes(alphaIndex, charIndex) {
 
 module.exports = Html5Entities;
 
-
-/***/ }),
-/* 1 */
-/*!*************************!*\
-  !*** external "jQuery" ***!
-  \*************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports) {
-
-module.exports = jQuery;
 
 /***/ }),
 /* 2 */
@@ -1846,8 +1846,8 @@ ansiHTML.reset()
 module.exports = {
   XmlEntities: __webpack_require__(/*! ./lib/xml-entities.js */ 13),
   Html4Entities: __webpack_require__(/*! ./lib/html4-entities.js */ 14),
-  Html5Entities: __webpack_require__(/*! ./lib/html5-entities.js */ 0),
-  AllHtmlEntities: __webpack_require__(/*! ./lib/html5-entities.js */ 0)
+  Html5Entities: __webpack_require__(/*! ./lib/html5-entities.js */ 1),
+  AllHtmlEntities: __webpack_require__(/*! ./lib/html5-entities.js */ 1)
 };
 
 
@@ -2348,8 +2348,7 @@ module.exports = function(hash, moduleMap, options) {
 /* 28 */,
 /* 29 */,
 /* 30 */,
-/* 31 */,
-/* 32 */
+/* 31 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2358,11 +2357,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/asher/personal/static/app/wp-content/themes/static/resources/assets/build/util/../helpers/hmr-client.js */2);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */33);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */32);
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/
@@ -2372,7 +2371,7 @@ module.exports = __webpack_require__(/*! ./scripts/customizer.js */33);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(/*! jquery */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
